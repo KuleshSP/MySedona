@@ -1,0 +1,33 @@
+.button {
+  width: 280px;
+  height: 58px;
+
+  border: none;
+  background-color: @main-blue;
+
+  color: @text-white;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+.button:hover {
+  background-color: @main-blue-hover;
+}
+
+.button:active {
+  background-color: @main-blue-down;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  backbround-color: @main-blue-disabled;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    width: 458px;
+  }
+}

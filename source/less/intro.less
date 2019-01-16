@@ -1,0 +1,97 @@
+.intro__wrapper-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 389px;
+
+  background: url('../img/bg-back-mobile@1x.jpg') no-repeat center;
+}
+
+.intro__wrapper--form {
+  height: 160px;
+}
+
+.intro__big-logo,
+.intro__logo {
+  margin: auto;
+}
+
+.intro__logo {
+  transform: translateY(50%);
+}
+
+
+.intro__bg-triangle-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 57px;
+  overflow: hidden;
+}
+
+.intro__bg-triangle-top {
+  position: absolute;
+  width: 700px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+}
+
+.intro__bg-triangle-top-large {
+  position: absolute;
+  width: 1200px;
+  height: 57px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+}
+
+.intro__wrapper-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.intro__caption {
+  text-transform: uppercase;
+}
+
+.intro__text {
+  font-size: 14px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .intro__wrapper-title {
+    width: 50%;
+    margin: 30px auto;
+  }
+
+  .intro__logo {
+    width: 460px;
+  }
+
+  .intro__wrapper--form {
+    height: 290px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro__wrapper-logo {
+    height: 518px;
+
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .intro__big-logo {
+    width: 460px;
+    height: 350px;
+  }
+}

@@ -1,0 +1,129 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.site-list__link,
+.site-list__current-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 55px;
+
+  background-color: @main-blue;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-list__link:hover {
+  background-color: @main-blue-hover;
+}
+
+.site-list__link:active {
+  background-color: @main-blue-down;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.site-list__item:first-child .site-list__link {
+  border-top: none;
+  box-shadow: none;
+}
+
+.site-list__item:nth-child(4) .site-list__link {
+  box-shadow: inset 0 -3px 7px 0 rgba(0, 0, 0, 0.2);
+}
+
+.site-list__item:last-child .site-list__link {
+  border-bottom: none;
+}
+
+.site-list__item--logo {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 55px;
+}
+
+.page-header__logo {
+  align-self: flex-start;
+}
+
+.site-list__button-cross {
+  position: absolute;
+  right: 7px;
+  top: 5px;
+
+  width: 50px;
+  height: 50px;
+
+  background: none;
+  border: none;
+}
+
+.site-list__button-cross-image {
+  fill: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    flex-direction: row;
+  }
+
+  .site-list__item:nth-child(n+3) {
+    order: 2;
+  }
+
+  .site-list__item:nth-child(4) .site-list__link {
+    box-shadow: none;
+  }
+
+  .site-list__item:last-child {
+    order: 1;
+  }
+
+  .site-list__link:hover {
+    background-color: white;
+    color: @main-blue;
+  }
+
+  .site-list__link:active {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .site-list__item {
+    width: 20%;
+  }
+
+  .site-list__link,
+  .site-list__current-page {
+    background-color: #ffffff;
+    color: black;
+
+    border: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-list--closed .site-list__item:not(:last-child) {
+    display: none;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+}

@@ -1,0 +1,77 @@
+@import "variables.less";
+@import "advantages.less";
+@import "button.less";
+@import "form";
+@import "extra-list";
+@import "intro";
+@import "likes-counter";
+@import "main-nav";
+@import "map";
+@import "motel-search";
+@import "page-footer";
+@import "page-header";
+@import "photo";
+@import "presentation";
+@import "page-main";
+@import "review";
+@import "site-list";
+@import "social";
+@import "video-player";
+@import "copyright";
+
+body {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    width: 768px;
+
+    background-size: 1178px auto;
+  }
+
+  .tablet-visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    width: 1200px;
+
+    background-size: 1391px auto;
+  }
+
+  .desktop-visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+}
